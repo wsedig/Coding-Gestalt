@@ -19,6 +19,7 @@ void setup() {
 void draw() {
   background(255);
   fill(0);
+  textSize(72);
   textAlign(CENTER);
   text("Hello World", width/2, height/2);
 }
