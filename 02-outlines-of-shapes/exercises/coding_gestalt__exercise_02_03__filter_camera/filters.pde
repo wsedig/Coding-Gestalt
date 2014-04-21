@@ -23,22 +23,30 @@ PImage threshold(PImage img, int threshold) {
 }
 
 PImage dilate(PImage img, int steps) {
-  Filter.begin(img);
-  for (int i = 0; i < Filter.source.length; i++) {
-    Filter.target[i] = color(Filter.source[i]);
+  int w = img.width, h = img.height;
+  PImage img2 = createImage(w, h, RGB);
+  img.loadPixels();
+  for (int y = 0; y < h; y++) {
+    for (int x = 0; x < w; x++) {
+      img2.pixels[y * w + x] = img.pixels[y * w + x];
+      filter(DILATE);
+    }
   }
-  return Filter.end();
+  return img2;
 }
 
 PImage erode(PImage img, int steps) {
-  Filter.begin(img);
-  for (int i = 0; i < Filter.source.length; i++) {
-    Filter.target[i] = color(Filter.source[i]);
+  int w = img.width, h = img.height;
+  PImage img2 = createImage(w, h, RGB);
+  img.loadPixels();
+  for (int y = 0; y < h; y++) {
+    for (int x = 0; x < w; x++) {
+      img2.pixels[y * w + x] = img.pixels[y * w + x];
+      filter(ERODE);
+    }
   }
-  return Filter.end();
+  return img2;
 }
-
-
 
 
 
