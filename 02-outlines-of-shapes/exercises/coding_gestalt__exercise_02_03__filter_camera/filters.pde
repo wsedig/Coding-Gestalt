@@ -8,7 +8,7 @@
 
 PImage grayscale(PImage img) {
   Filter.begin(img);
-  for(int i = 0; i < Filter.source.length; i++) {
+  for (int i = 0; i < Filter.source.length; i++) {
     Filter.target[i] = color(brightness(Filter.source[i]));
   }
   return Filter.end();
@@ -16,21 +16,27 @@ PImage grayscale(PImage img) {
 
 PImage threshold(PImage img, int threshold) {
   Filter.begin(img);
-  for(int i = 0; i < Filter.source.length; i++) {
+  for (int i = 0; i < Filter.source.length; i++) {
     Filter.target[i] = color(brightness(Filter.source[i]) > threshold ? 255 : 0);
   }
   return Filter.end();
 }
 
 PImage dilate(PImage img, int steps) {
-  return img; 
+  Filter.begin(img);
+  for (int i = 0; i < Filter.source.length; i++) {
+    Filter.target[i] = color(Filter.source[i]);
+  }
+  return Filter.end();
 }
 
 PImage erode(PImage img, int steps) {
-  return img;
+  Filter.begin(img);
+  for (int i = 0; i < Filter.source.length; i++) {
+    Filter.target[i] = color(Filter.source[i]);
+  }
+  return Filter.end();
 }
-
-
 
 
 

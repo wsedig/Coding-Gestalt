@@ -28,7 +28,7 @@ color track_color = #6666ff;
 int speed = 100;
 final int FALSE = 0, TRUE = 1, MAYBE = -1;
   
-NeumannFill fl;
+MooreFill fl;
 
 void setup() {
   size(500, 500);
@@ -53,7 +53,7 @@ void reset() {
   }
   
   // reset our fill tool
-  fl = new NeumannFill();
+  fl = new MooreFill();
   
 }
 

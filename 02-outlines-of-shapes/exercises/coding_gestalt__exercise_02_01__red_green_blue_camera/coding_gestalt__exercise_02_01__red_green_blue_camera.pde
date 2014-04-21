@@ -18,7 +18,7 @@
 //                                               //
 ///////////////////////////////////////////////////
 
-// (c) YOUR_NAME at Bauhaus-Uni Weimar
+// (c) William_Sedig at Bauhaus-Uni Weimar
 
 
 import processing.video.Capture;
@@ -55,13 +55,13 @@ void draw() {
   show(snap, "original", 0, 0);
 
   // top right
-  show(red(snap), "red", 1, 0);
+  show(redVersion(snap), "red", 1, 0);
 
   // bottom left
-  show(green(snap), "green", 0, 1);
+  show(greenVersion(snap), "green", 0, 1);
 
   // bottom right
-  show(blue(snap), "blue", 1, 1);
+  show(blueVersion(snap), "blue", 1, 1);
 }
 
 

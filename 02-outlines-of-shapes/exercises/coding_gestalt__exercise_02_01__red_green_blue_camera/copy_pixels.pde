@@ -48,10 +48,13 @@ PImage copy_pixels_fast(PImage img) {
   // let the pixel pushing begin!
   for(int y = 0; y < h; y++) {
     for(int x = 0; x < w; x++) {
-      
+      int loc = x + y*w;
+      float r = red(img.pixels[loc]);
+      color c = color(r,0,0);
+      img2.pixels[loc] = c;
       // just copy the pixel from the source to the target
       // this is where you do all the crazy per pixel operations
-      img2.pixels[y * w + x] = img.pixels[y * w + x];
+      
       
     }
   }
