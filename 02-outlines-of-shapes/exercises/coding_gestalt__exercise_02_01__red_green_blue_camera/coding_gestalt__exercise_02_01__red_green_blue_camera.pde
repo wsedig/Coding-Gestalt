@@ -55,13 +55,13 @@ void draw() {
   show(snap, "original", 0, 0);
 
   // top right
-  show(redVersion(snap), "red", 1, 0);
+  show(redVersion2(snap), "red", 1, 0);
 
   // bottom left
-  show(greenVersion(snap), "green", 0, 1);
+  show(greenVersion2(snap), "green", 0, 1);
 
   // bottom right
-  show(blueVersion(snap), "blue", 1, 1);
+  show(blueVersion2(snap), "blue", 1, 1);
 }
 
 
