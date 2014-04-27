@@ -57,13 +57,13 @@ void draw() {
   show(snap, "original", 0, 0);
 
   // top right
-  show(flip(snap), "flip", 1, 0);
+  show(flip2(snap), "flip", 1, 0);
 
   // bottom left
-  show(flop(snap), "flop", 0, 1);
+  show(flop2(snap), "flop", 0, 1);
 
   // bottom right
-  show(flip(flop(snap)), "flip flop", 1, 1);
+  show(flip2(flop2(snap)), "flip flop", 1, 1);
 }
 
 
